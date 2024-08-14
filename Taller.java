@@ -3,10 +3,13 @@ public class Taller {
     public Taller(){
 
     }
-    public static String Mayor(int matriz[][]) {
+    public String Mayor(int m) {
 
-        int numeroMayor = matriz[0][0];
+        int numeroMayor = 0;
+        MatrizAleatoria ma  = new MatrizAleatoria();
 
+        int[][] matriz = new int[m][m];
+        matriz = ma.llenarMatriz(m);
         String mayorPosicion = "0,0";
 
         for (int i = 0; i < matriz.length; i++) {
