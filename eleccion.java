@@ -3,12 +3,17 @@ public class eleccion {
 
     public void ele(int M, int opt) {
         Scanner sc = new Scanner(System.in);
+   
         switch (opt) {
             case 1:
                 System.out.println("Pagina en manteniemiento");
                 break;
             case 2:
-                System.out.println("Pagina en mantenimiento");
+                Taller mostrar=new Taller();
+                String mensaje = "";  
+                 mensaje = mostrar.Mayor(M);
+                 System.out.println(mensaje);
+                                
                 break;
             case 3:
                 System.out.println("pagian en mantenimiento");
