@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class eleccion {
-
     public void ele(int M, int opt) {
         Scanner sc = new Scanner(System.in);
         cerosnegativospositivos c = new cerosnegativospositivos();
