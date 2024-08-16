@@ -3,6 +3,7 @@ public class eleccion {
 
     public void ele(int M, int opt) {
         Scanner sc = new Scanner(System.in);
+        cerosnegativospositivos c = new cerosnegativospositivos();
    
         switch (opt) {
             case 1:
@@ -28,7 +29,7 @@ public class eleccion {
                 System.out.println("Pagina en mantenimiento");
                 break;
             case 7:
-                System.out.println("Pagina en mantenieminto");
+                c.contarmatriz(M);
                 break;
             case 8:
                 System.out.println("Pagina en mantenimiento");
