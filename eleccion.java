@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class eleccion {
-
     public void ele(int M, int opt) {
         Scanner sc = new Scanner(System.in);
+        cerosnegativospositivos c = new cerosnegativospositivos();
    
         switch (opt) {
             case 1:
@@ -16,7 +16,18 @@ public class eleccion {
                                 
                 break;
             case 3:
-                System.out.println("pagian en mantenimiento");
+                sumaFilasYColumnas operacion=new sumaFilasYColumnas(M);
+                
+                int indice=1;
+                for(int elemento: operacion.sumaFilas()){
+                    System.out.print("La suma de la fila: "+indice+" es: "+elemento+" ");
+
+                }
+                System.out.println();
+                for(int elemento: operacion.sumaColumnas()){
+                    System.out.print("La suma de la columna: "+indice+" es: "+elemento+" ");
+
+                }
                 break;
             case 4:
                 System.out.println("Pagina en manteniemiento");
@@ -28,7 +39,7 @@ public class eleccion {
                 System.out.println("Pagina en mantenimiento");
                 break;
             case 7:
-                System.out.println("Pagina en mantenieminto");
+                c.contarmatriz(M);
                 break;
             case 8:
                 System.out.println("Pagina en mantenimiento");
