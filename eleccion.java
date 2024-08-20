@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class eleccion {
 
     public void ele(int M, int opt) {
@@ -20,7 +21,27 @@ public class eleccion {
                 System.out.println("Pagian en mantenimeinto");
                 break;
             case 6:
-                System.out.println("Pagina en mantenimiento");
+                clsMatrizGral om = new clsMatrizGral();
+                clsVectorGral oV = new clsVectorGral();
+                Ejercicio6 ej6 = new Ejercicio6();
+                int[][] matriz = new int[M][M];
+
+                matriz = om.llenarRamdom(M);
+
+                // om.mostrarEnteros(matriz, "");
+                for (int i = 0; i < matriz.length; i++) {
+                    for (int j = 0; j < matriz[i].length; j++) {
+                        System.out.print(matriz[i][j] + " ");
+                    }
+                    System.out.println("\n");
+                }
+
+                int[] vet = new int[matriz.length];
+                vet = ej6.sumarEnterosPorFilas(matriz);
+                for (int i = 0; i < vet.length; i++) {
+                    System.out.println("La suma de los elementos por fila es: "+vet[i]);
+                }
+
                 break;
             case 7:
                 System.out.println("Pagina en mantenieminto");
