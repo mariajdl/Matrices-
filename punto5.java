@@ -20,7 +20,7 @@ public class punto5{
             System.out.print(")");
             if (i < matriz.length - 1) System.out.print(",");
         }
-        System.out.println("}");
+       System.out.println("}\n");
     }
         
 }    
