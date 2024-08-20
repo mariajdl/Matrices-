@@ -33,7 +33,9 @@ public class eleccion {
                 System.out.println("Pagina en manteniemiento");
                 break;
             case 5:
-                System.out.println("Pagian en mantenimeinto");
+            MatrizAleatoria nl = new MatrizAleatoria();
+            int[][] m = nl.llenarMatriz(M);                 
+            punto5.ImprimirComoVector(m);
                 break;
             case 6:
                 System.out.println("Pagina en mantenimiento");
