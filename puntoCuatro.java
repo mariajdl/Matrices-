@@ -1,5 +1,6 @@
 public class puntoCuatro {
 
+
     public void Cuatro(int dim) {
         MatrizAleatoria ma = new MatrizAleatoria();
         int[][] matriz = new int[dim][dim];
@@ -12,6 +13,7 @@ public class puntoCuatro {
             System.out.println("la suma de la columna " + i + " es : " + sumacolumnas[i]);
         }
         System.out.println("la suma maxima es :" + sumamaxima);
+
 
     }
 
@@ -31,6 +33,7 @@ public class puntoCuatro {
 
     public String SumaMaxima(int[][] sumaColumnas) {
         int columnaMaxima = 0;
+
         int sumaMaxima = sumaColumnas[0][0];
 
         for (int i = 0; i < sumaColumnas.length; i++) {
@@ -40,11 +43,21 @@ public class puntoCuatro {
                     columnaMaxima = i;
 
                 }
+
             }
 
         }
+
 
         return "la suma maxima es: " + sumaMaxima + " y esta en la columna " + columnaMaxima;
 
     }
 }
+
+
+    }
+}
+
+
+    
+
