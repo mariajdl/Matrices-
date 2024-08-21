@@ -1,14 +1,22 @@
 
+public class punto_9 {
+    public int dim = 0;
 
-package punto_9;
+    public void punto_nueve(int dim) {
+        punto_9 p9 = new punto_9();
+        MatrizAleatoria ma = new MatrizAleatoria();
+        int[][] matriz = new int[dim][dim];
+        matriz = ma.llenarMatriz(dim);
+        int i_pos_max = 0, j_pos_max = 0;
+        int i_pos_min = 0, j_pos_min = 0;
+        p9.Max_Num(matriz,i_pos_max,j_pos_max);
+        p9.Min_Num(matriz,i_pos_min,j_pos_min );
+        p9.col_max(matriz)
+ 
 
-public class nueve {
+    }
 
-    int[][] matriz;
-    int i_pos_max = 0, j_pos_max = 0;
-    int i_pos_min = 0, j_pos_min = 0;
-
-    public String Max_Num(int matriz[][]) {
+    public String Max_Num(int matriz[][], int i_pos_max, int j_pos_max) {
 
         String mensaje;
         int max = Integer.MIN_VALUE;
@@ -34,7 +42,8 @@ public class nueve {
             System.out.println(" ");
         }
 
-        mensaje = "\nEl valor máximo es " + String.valueOf(max) + " y su posición es: [" + String.valueOf(i_pos_max + 1) + "][" + String.valueOf(j_pos_max + 1) + "]";
+        mensaje = "\nEl valor máximo es " + String.valueOf(max) + " y su posición es: [" + String.valueOf(i_pos_max + 1)
+                + "][" + String.valueOf(j_pos_max + 1) + "]";
 
         System.out.println(mensaje);
 
@@ -42,7 +51,7 @@ public class nueve {
 
     }
 
-    public String Min_Num(int matriz[][]) {
+    public String Min_Num(int matriz[][],int i_pos_min, int j_pos_min) {
 
         String mensaje2;
         int min = Integer.MAX_VALUE;
@@ -62,7 +71,8 @@ public class nueve {
 
         }
 
-        mensaje2 = "\nEl valor minimo es " + String.valueOf(min) + " y su posición es: [" + String.valueOf(i_pos_min + 1) + "][" + String.valueOf(j_pos_min + 1) + "]";
+        mensaje2 = "\nEl valor minimo es " + String.valueOf(min) + " y su posición es: ["
+                + String.valueOf(i_pos_min + 1) + "][" + String.valueOf(j_pos_min + 1) + "]";
 
         System.out.println(mensaje2);
         return mensaje2;
