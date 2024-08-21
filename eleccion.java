@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class eleccion {
@@ -59,5 +60,5 @@ public class eleccion {
             default:
                 break;
         }
-    }
+
 }
