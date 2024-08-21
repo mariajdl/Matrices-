@@ -1,6 +1,5 @@
 
 public class punto_9 {
-    public int dim = 0;
 
     public void punto_nueve(int dim) {
         punto_9 p9 = new punto_9();
@@ -9,10 +8,14 @@ public class punto_9 {
         matriz = ma.llenarMatriz(dim);
         int i_pos_max = 0, j_pos_max = 0;
         int i_pos_min = 0, j_pos_min = 0;
-        p9.Max_Num(matriz,i_pos_max,j_pos_max);
-        p9.Min_Num(matriz,i_pos_min,j_pos_min );
-        p9.col_max(matriz)
- 
+        String maximoNumero = p9.Max_Num(matriz, i_pos_max, j_pos_max);
+        String minimoNumero = p9.Min_Num(matriz, i_pos_min, j_pos_min);
+        String colMaxima = p9.col_max(matriz, i_pos_max, j_pos_max);
+        String filaMax = p9.fil_max(matriz, i_pos_max, j_pos_max);
+        System.out.println(maximoNumero);
+        System.out.println(minimoNumero);
+        System.out.println(colMaxima);
+        System.out.println(filaMax);
 
     }
 
@@ -33,25 +36,23 @@ public class punto_9 {
             }
         }
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
 
                 System.out.print("[" + matriz[i][j] + "] ");
 
             }
             System.out.println(" ");
         }
-
-        mensaje = "\nEl valor máximo es " + String.valueOf(max) + " y su posición es: [" + String.valueOf(i_pos_max + 1)
-                + "][" + String.valueOf(j_pos_max + 1) + "]";
-
-        System.out.println(mensaje);
+        mensaje= "\n   El valor máximo es:  " + max + "y su posición es fila :" + (i_pos_max + 1) + "y la columna"+ (j_pos_max + 1);
+        // mensaje = "\n El valor máximo es " + String.valueOf(max) + " y su posición es: [" + String.valueOf(i_pos_max + 1)
+        //         + "][" + String.valueOf(j_pos_max + 1) + "]";    
 
         return mensaje;
 
     }
 
-    public String Min_Num(int matriz[][],int i_pos_min, int j_pos_min) {
+    public String Min_Num(int matriz[][], int i_pos_min, int j_pos_min) {
 
         String mensaje2;
         int min = Integer.MAX_VALUE;
@@ -78,7 +79,7 @@ public class punto_9 {
         return mensaje2;
     }
 
-    public String col_max(int matriz[][]) {
+    public String col_max(int matriz[][], int i_pos_max, int j_pos_max) {
 
         String mensaje3 = "";
         int max = Integer.MIN_VALUE;
@@ -108,7 +109,7 @@ public class punto_9 {
         return mensaje3;
     }
 
-    public String fil_max(int matriz[][]) {
+    public String fil_max(int matriz[][], int i_pos_max, int j_pos_max) {
 
         int max = Integer.MIN_VALUE;
         String mensaje4 = "";

@@ -1,15 +1,12 @@
 import java.io.*;
 import java.text.DecimalFormat;
-import java.util.Random;
 
 public class Punto_once {
 
-    public static void main(String[] args) throws IOException {
+    public void once(int dim) throws IOException {
         BufferedReader cp = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Ingrese el número de estudiantes:");
         int N = Integer.parseInt(cp.readLine());
-
-        Random aleatorio = new Random();
 
         double[][] calificaciones = new double[N][5];
 
@@ -115,13 +112,11 @@ public class Punto_once {
         }
         return estudiante;
     }
-    public double BuscarmejorP(double[]promedios)
-    {
+
+    public double BuscarmejorP(double[] promedios) {
         double mejorprom = 0;
-        for (int i = 0; i<promedios.length; i++)
-        {
-            if (mejorprom<promedios[i])
-            {
+        for (int i = 0; i < promedios.length; i++) {
+            if (mejorprom < promedios[i]) {
                 mejorprom = promedios[i];
             }
         }
