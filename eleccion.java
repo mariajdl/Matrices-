@@ -36,7 +36,9 @@ public class eleccion {
                 }
                 break;
             case 4:
-                System.out.println("Pagina en manteniemiento");
+                puntoCuatro p4 = new puntoCuatro();
+                p4.Cuatro(M);
+
                 break;
             case 5:
                 MatrizAleatoria nl = new MatrizAleatoria();
